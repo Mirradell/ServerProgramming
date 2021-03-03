@@ -10,3 +10,15 @@ Listening...
 18.02.2021 14:42:09	::1	http://localhost:8080/	200
 18.02.2021 14:42:11	::1	http://localhost:8080/image	200
 18.02.2021 14:42:12	::1	http://localhost:8080/exit	200
+Listening...
+
+24.02.2021 16:45:06	::1	http://localhost:8080/	200
+24.02.2021 16:45:08	::1	http://localhost:8080/image	200
+24.02.2021 16:45:13	::1	http://localhost:8080/error	404
+24.02.2021 16:45:20	::1	http://localhost:8080/exit	200
+Listening...
+
+24.02.2021 16:45:31	::1	http://localhost:8080/	200
+24.02.2021 16:46:49	::1	http://localhost:8080/image	200
+24.02.2021 16:47:00	::1	http://localhost:8080/error	404
+24.02.2021 16:47:07	::1	http://localhost:8080/exit	200
