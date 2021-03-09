@@ -1,0 +1,119 @@
+﻿@page
+@model Lab._3.Models.AllModels
+@{
+    var testimonials = new Lab._3.Models.TestimonialModelcs();
+    var logos = new Lab._3.Models.LogosModel();
+    var services = new Lab._3.Models.ServiceModel();
+}
+
+<div class="banner-area banner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                    <h2>Our Services</h2>
+                    <ul class="page-title-link">
+                        <li><a asp-page="./Index">Home</a></li>
+                        <li><a href="#">Our Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="section wb">
+    <div class="container">
+        <div class="row text-center">
+            @foreach (var spanClass in services.spanClasses)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <span class="@spanClass"></span>
+                        </div>
+                        <div class="about-text">
+                            <h3> <a href="#">Lorem ipsum dolor. </a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ea, quis magnam deserunt. </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div> 
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="services" class="parallax section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Our Service</h3>
+            <p class="lead">Our Service unlimited solutions to all your business needs. in the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
+        </div><!-- end title -->
+
+        <div class="owl-services owl-carousel owl-theme">
+        @foreach (var service in services.items)
+        {
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href=@service.ImageURL data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                    <img src=@service.ImageURL alt="" class="img-responsive img-rounded">
+                </div>
+                <div class="service-dit">
+                    <h3>@service.Title</h3>
+                    <p>@service.Text</p>
+                </div>
+            </div>
+            <!-- end service -->
+        }
+            <!-- end service -->
+        </div><!-- end row -->
+
+        <hr class="hr1">
+
+        <div class="text-center">
+            <a data-scroll asp-page="./Portfolio" class="btn btn-light btn-radius btn-brd">View Our Portfolio</a>
+        </div>
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Testimonials</h3>
+            <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="testi-carousel owl-carousel owl-theme">
+                    @foreach (var testimonial in testimonials.items)
+                    {
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> @testimonial.Title</h3>
+                                <p class="lead">@testimonial.Text</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src=@testimonial.ImageURL alt="" class="img-responsive alignleft">
+                                <h4>@testimonial.Name <small>- @testimonial.Profession</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                    }
+                </div><!-- end carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+
+        <hr class="hr1">
+
+        <div class="row logos">
+            @foreach (var logo in logos.items)
+            {
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src=@logo.LogoURL alt="" class="img-repsonsive"></a>
+                </div>
+            }
+        </div><!-- end row -->
+
+    </div><!-- end container -->
+</div><!-- end section -->

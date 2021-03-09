@@ -1,0 +1,54 @@
+[
+  {
+    "Title": "Standard",
+    "SubTitle": "Lorem ipsum",
+    "Money": "$110/year",
+    "Currency": "$",
+    "Amount": "10.",
+    "Month": "/month",
+    "ContentAbl": [
+      "50GB Disk Space",
+      "50 Email Accounts",
+      "50GB Monthly Bandwidth"
+    ],
+    "ContentDis": [
+      "10 Subdomains",
+      "15 Domains"
+    ]
+  },
+
+  {
+    "Title": "Business",
+    "SubTitle": "Lorem ipsum",
+    "Money": "$220/year",
+    "Currency": "$",
+    "Amount": "20.",
+    "Month": "/month",
+    "ContentAbl": [
+      "60GB Disk Space",
+      "60 Email Accounts",
+      "60GB Monthly Bandwidth",
+      "15 Subdomains"
+    ],
+    "ContentDis": [
+      "20 Domains"
+    ]
+  },
+
+  {
+    "Title": "Premium",
+    "SubTitle": "Lorem ipsum",
+    "Money": "$330/year",
+    "Currency": "$",
+    "Amount": "30.",
+    "Month": "/month",
+    "ContentAbl": [
+      "70GB Disk Space",
+      "70 Email Accounts",
+      "70GB Monthly Bandwidth",
+      "20 Subdomains",
+      "25 Domains"
+    ],
+    "ContentDis": []
+  }
+]

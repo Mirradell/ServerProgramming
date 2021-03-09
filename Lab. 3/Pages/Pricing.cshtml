@@ -1,0 +1,157 @@
+﻿@page
+@model Lab._3.Models.AllModels
+@{
+    var testimonials = new Lab._3.Models.TestimonialModelcs();
+    var logos = new Lab._3.Models.LogosModel();
+    var prices = new Lab._3.Models.PricesModel();
+}
+
+<div class="banner-area banner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                    <h2>Pricing</h2>
+                    <ul class="page-title-link">
+                        <li><a asp-page="./Index">Home</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Pricing</h3>
+            <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
+        </div><!-- end title -->
+
+        <div class="row">
+
+            @foreach (var price in prices.items)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <h3 class="title">@price.Title</h3>
+                            <span class="sub-title">@price.SubTitle</span>
+                            <span class="year">Pay only <br>@price.Money</span>
+                        </div>
+                        <div class="price-value">
+                            <div class="value">
+                                <span class="currency">@price.Currency</span>
+                                <span class="amount">@price.Amount<span>99</span></span>
+                                <span class="month">@price.Month</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-content">
+                            @foreach (var content in price.ContentAbl)
+                            {
+                                <li>@content</li>
+                            }
+                            @foreach (var content in price.ContentDis)
+                            {
+                                <li class="disable">@content</li>
+                            }
+                        </ul>
+                        <a href="#" class="pricingTable-signup">Select the plan </a>
+                    </div>
+                </div>
+            }
+ <!--           <div class="col-md-4 col-sm-6">
+                <div class="pricingTable purple">
+                    <div class="pricingTable-header">
+                        <h3 class="title">Business</h3>
+                        <span class="sub-title">Lorem ipsum</span>
+                        <span class="year">Pay only <br>$220/year</span>
+                    </div>
+                    <div class="price-value">
+                        <div class="value">
+                            <span class="currency">$</span>
+                            <span class="amount">20.<span>99</span></span>
+                            <span class="month">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>60GB Disk Space</li>
+                        <li>60 Email Accounts</li>
+                        <li>60GB Monthly Bandwidth</li>
+                        <li>15 Subdomains</li>
+                        <li class="disable">20 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Select the plan </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable blue">
+                    <div class="pricingTable-header">
+                        <h3 class="title">Premium</h3>
+                        <span class="sub-title">Lorem ipsum</span>
+                        <span class="year">Pay only <br>$330/year</span>
+                    </div>
+                    <div class="price-value">
+                        <div class="value">
+                            <span class="currency">$</span>
+                            <span class="amount">30.<span>99</span></span>
+                            <span class="month">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>70GB Disk Space</li>
+                        <li>70 Email Accounts</li>
+                        <li>70GB Monthly Bandwidth</li>
+                        <li>20 Subdomains</li>
+                        <li>25 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Select the plan </a>
+                </div>
+            </div> -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Testimonials</h3>
+            <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="testi-carousel owl-carousel owl-theme">
+                    @foreach (var testimonial in testimonials.items)
+                    {
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> @testimonial.Title</h3>
+                                <p class="lead">@testimonial.Text</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src=@testimonial.ImageURL alt="" class="img-responsive alignleft">
+                                <h4>@testimonial.Name <small>- @testimonial.Profession</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                    }
+                </div><!-- end carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+
+        <hr class="hr1">
+
+        <div class="row logos">
+            @foreach (var logo in logos.items)
+            {
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src=@logo.LogoURL alt="" class="img-repsonsive"></a>
+                </div>
+            }
+        </div><!-- end row -->
+
+    </div><!-- end container -->
+</div>

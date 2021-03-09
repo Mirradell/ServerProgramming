@@ -1,0 +1,147 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Lab._3</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\favicon.ico" />
+    <Content Remove="wwwroot\js\all.js" />
+    <Content Remove="wwwroot\js\custom.js" />
+    <Content Remove="wwwroot\js\hoverdir.js" />
+    <Content Remove="wwwroot\js\modernizer.js" />
+    <Content Remove="wwwroot\js\portfolio.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\About-us.cshtml" />
+    <None Include="Pages\Contact.cshtml" />
+    <None Include="Pages\Features.cshtml" />
+    <None Include="Pages\Portfolio.cshtml" />
+    <None Include="Pages\Pricing.cshtml" />
+    <None Include="Pages\Services.cshtml" />
+    <None Include="Pages\Testimonials.cshtml" />
+    <None Include="wwwroot\contact.php" />
+    <None Include="wwwroot\css\animate.css" />
+    <None Include="wwwroot\css\bootstrap-theme.css" />
+    <None Include="wwwroot\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\custom.css" />
+    <None Include="wwwroot\css\flaticon.css" />
+    <None Include="wwwroot\css\font-awesome.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\icomoon.css" />
+    <None Include="wwwroot\css\owl.carousel.css" />
+    <None Include="wwwroot\css\prettyPhoto.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\fonts\Flaticon.eot" />
+    <None Include="wwwroot\fonts\Flaticon.svg" />
+    <None Include="wwwroot\fonts\Flaticon.ttf" />
+    <None Include="wwwroot\fonts\Flaticon.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\fonts\IcoMoon-Free.ttf" />
+    <None Include="wwwroot\images\apple-touch-icon.png" />
+    <None Include="wwwroot\images\bg.png" />
+    <None Include="wwwroot\images\logo-politic.png" />
+    <None Include="wwwroot\images\logos\logo-2.png" />
+    <None Include="wwwroot\images\logos\logo.png" />
+    <None Include="wwwroot\images\phonebg.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\dark_rounded\sprite.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\btnNext.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\contentPattern.png" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\dark_square\sprite.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\default_thumb.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\default\sprite.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\sprite_next.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\sprite_prev.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\sprite_x.png" />
+    <None Include="wwwroot\images\prettyPhoto\default\sprite_y.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\btnNext.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\btnPrevious.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\facebook\sprite.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_rounded\btnNext.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <None Include="wwwroot\images\prettyPhoto\light_rounded\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\light_rounded\sprite.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_square\btnNext.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_square\btnPrevious.png" />
+    <None Include="wwwroot\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <None Include="wwwroot\images\prettyPhoto\light_square\loader.gif" />
+    <None Include="wwwroot\images\prettyPhoto\light_square\sprite.png" />
+    <None Include="wwwroot\js\all.js" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\hoverdir.js" />
+    <None Include="wwwroot\js\modernizer.js" />
+    <None Include="wwwroot\js\portfolio.js" />
+    <None Include="wwwroot\uploads\about_01.jpg" />
+    <None Include="wwwroot\uploads\about_02.jpg" />
+    <None Include="wwwroot\uploads\device_03.png" />
+    <None Include="wwwroot\uploads\features_01.jpg" />
+    <None Include="wwwroot\uploads\features_02.jpg" />
+    <None Include="wwwroot\uploads\features_03.jpg" />
+    <None Include="wwwroot\uploads\inner-bg.jpg" />
+    <None Include="wwwroot\uploads\ipad.png" />
+    <None Include="wwwroot\uploads\logo_01.png" />
+    <None Include="wwwroot\uploads\logo_02.png" />
+    <None Include="wwwroot\uploads\logo_03.png" />
+    <None Include="wwwroot\uploads\logo_04.png" />
+    <None Include="wwwroot\uploads\logo_05.png" />
+    <None Include="wwwroot\uploads\logo_06.png" />
+    <None Include="wwwroot\uploads\parallax_03.jpg" />
+    <None Include="wwwroot\uploads\parallax_04.jpg" />
+    <None Include="wwwroot\uploads\parallax_05.png" />
+    <None Include="wwwroot\uploads\portfolio_01.jpg" />
+    <None Include="wwwroot\uploads\portfolio_02.jpg" />
+    <None Include="wwwroot\uploads\portfolio_03.jpg" />
+    <None Include="wwwroot\uploads\portfolio_04.jpg" />
+    <None Include="wwwroot\uploads\portfolio_05.jpg" />
+    <None Include="wwwroot\uploads\portfolio_06.jpg" />
+    <None Include="wwwroot\uploads\portfolio_07.jpg" />
+    <None Include="wwwroot\uploads\portfolio_08.jpg" />
+    <None Include="wwwroot\uploads\portfolio_09.jpg" />
+    <None Include="wwwroot\uploads\portfolio_10.jpg" />
+    <None Include="wwwroot\uploads\service_01.jpg" />
+    <None Include="wwwroot\uploads\service_02.jpg" />
+    <None Include="wwwroot\uploads\service_03.jpg" />
+    <None Include="wwwroot\uploads\service_04.jpg" />
+    <None Include="wwwroot\uploads\slider_01.jpg" />
+    <None Include="wwwroot\uploads\slider_02.jpg" />
+    <None Include="wwwroot\uploads\slider_03.jpg" />
+    <None Include="wwwroot\uploads\testi_01.png" />
+    <None Include="wwwroot\uploads\testi_02.png" />
+    <None Include="wwwroot\uploads\testi_03.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

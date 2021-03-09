@@ -1,0 +1,73 @@
+{
+  "Left": [
+    {
+      "Title": "WordPress Installation",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. ",
+      "Class": "flaticon-wordpress-logo"
+    },
+
+    {
+      "Title": "Browser Compatible",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. ",
+      "Class": "flaticon-windows"
+    },
+
+    {
+      "Title": "eCommerce Ready",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. ",
+      "Class": "flaticon-price-tag"
+    },
+
+    {
+      "Title": "Easy to Customize",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. ",
+      "Class": "flaticon-new-file"
+    }
+  ],
+
+  "Right": [
+    {
+      "Title": "Limitless Colors",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.",
+      "Class": "flaticon-pantone"
+    },
+
+    {
+      "Title": "Lifetime Update",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.",
+      "Class": "flaticon-cloud-computing"
+    },
+
+    {
+      "Title": "SEO Friendly",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.",
+      "Class": "flaticon-line-graph"
+    },
+
+    {
+      "Title": "Simple Clean Code",
+      "Text": "Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.",
+      "Class": "flaticon-coding"
+    }
+  ],
+
+  "Services": [
+    {
+      "ImageURL": "uploads/features_01.jpg",
+      "Title": "Outstanding Landing Pages",
+      "Text": "Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque."
+    },
+
+    {
+      "ImageURL": "uploads/features_02.jpg",
+      "Title": "Beautiful SVG Font Icons",
+      "Text": "Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. "
+    },
+
+    {
+      "ImageURL": "uploads/features_03.jpg",
+      "Title": "Build a Site In Few Minutes",
+      "Text": "Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis accumsan."
+    }
+  ]
+}

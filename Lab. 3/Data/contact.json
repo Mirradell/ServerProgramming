@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "first_name",
+    "Placeholder": "First Name"
+  },
+
+  {
+    "Name": "last_name",
+    "Placeholder": "Last Name"
+  },
+
+  {
+    "Name": "email",
+    "Placeholder": "Your Email"
+  },
+
+  {
+    "Name": "phone",
+    "Placeholder": "Your Phone"
+  }
+]
