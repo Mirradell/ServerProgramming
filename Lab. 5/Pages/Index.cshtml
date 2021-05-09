@@ -1,19 +1,45 @@
-﻿@page
-@{ 
-    var userModel = new Lab._5.Models.UserModel().item;
-    var postModel = new Lab._5.Models.PostModel();
+﻿@*page*@
+@model Lab._5.Models.Post
+@{
+    var model = new Lab._5.Models.CommonContext();
+    var currentUser = FindUserToShow(model);
+    var currentText = GetTextFromForm(model);
 }
+
+@functions{
+    public Lab._5.Models.User FindUserToShow(Models.CommonContext model)
+    {
+        if (ViewBag != null && ViewBag.Id != null)
+        {
+            var user = model.users.Find(ViewBag.Id);
+            if (user != null)
+                return user;
+        }
+
+        return model.users.First();
+    }
+
+    public Models.Post GetTextFromForm(Models.CommonContext model)
+    {
+        if (ViewBag.Edit != null)
+            return model.posts.Find(ViewBag.Edit);
+
+        return null;
+    }
+}
+
     <div class="container-fluid gedf-wrapper">
         <div class="row">
             <div class="col-md-3">
                 @*Html.RenderPartialAsync("_UserCard", userModel)*@
-                @await Html.PartialAsync("_UserCard", userModel)
+                @await Html.PartialAsync("_UserCard", currentUser)
             </div>
 
 
             <div class="col-md-6 gedf-main">
 
                 <!--- \\\\\\\UserPage -->
+                @using (Html.BeginForm("Create", "User", FormMethod.Post)) {
                 <div class="card gedf-card">
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -35,8 +61,8 @@
                             <div class="tab-pane fade show active" id="posts" role="tabpanel"
                                  aria-labelledby="posts-tab">
                                 <div class="form-group">
-                                    <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="3"
+                                    <label class="sr-only" asp-for="Text">post</label>
+                                    <textarea class="form-control" rows="3" asp-for="Text"
                                               placeholder="What are you thinking?"></textarea>
                                 </div>
 
@@ -44,20 +70,29 @@
                             <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
                                 <div class="form-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Upload image</label>
+                                        <input type="file" class="custom-file-input" id="customFile" asp-for="ImageURL" formmethod="post" enctype="multipart/form-data">
+                                        <label class="custom-file-label" asp-for="ImageURL">Upload image</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="1"
+                                    <label class="sr-only" asp-for="Text">post</label>
+                                    <textarea class="form-control" rows="3" asp-for="Text"
                                               placeholder="What are you thinking?"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="btn-toolbar justify-content-between">
                             <div class="btn-group">
-                                <button type="submit" class="btn btn-primary">Share</button>
+                                <!--<a asp-action="Create" asp-route-post="model">
+        <button type="submit" class="btn btn-primary">
+            Share
+        </button>
+    </a>-->
+                                @Html.Hidden("AuthorId", currentUser.ID)
+                                <button type="submit" class="btn btn-primary">
+                                    Share
+                                </button>
+
                             </div>
                             <div class="btn-group">
                                 <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle"
@@ -73,12 +108,14 @@
                         </div>
                     </div>
                 </div>
+                }
                 <!-- UserPage -->
                 <!--- Post -->
 
-                @foreach (var item in postModel.items)
+                @foreach (var item in model.posts)
                 {
-                    @await Html.PartialAsync("_UserPost", item)
+                    if (item.Author != null && item.Author.ID == currentUser.ID)
+                        @await Html.PartialAsync("_UserPost", item)
                 }
                 <!-- Post -->
             </div>

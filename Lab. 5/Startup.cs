@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Lab._5.Models;
+
 namespace Lab._5
 {
     public class Startup
@@ -24,6 +26,7 @@ namespace Lab._5
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+           // services.AddDbContext<CommonContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,10 +52,16 @@ namespace Lab._5
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                // endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "user",
+                    pattern: "{id}",
+                    defaults: new { controller = "User", action = "Details" }
+                    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Posts}/{action=Index}/{id?}"
+                    pattern: "{controller?}/{action=Details}/{id?}"
                     );
             });
         }
