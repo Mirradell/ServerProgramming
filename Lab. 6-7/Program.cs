@@ -18,6 +18,7 @@ namespace Lab._6
             {
                 db.users.RemoveRange(db.users);
                 db.posts.RemoveRange(db.posts);
+                db.accounts.RemoveRange(db.accounts);
                 db.SaveChanges();
 
                 var users = new List<User>() {
@@ -33,13 +34,28 @@ namespace Lab._6
                     new User
                     {
                         ID = 2,
-                        Name = "Ivan Petrov",
-                        UserName = "@Petka",
+                        Name = "Wonderful Bird",
+                        UserName = "@FlyMe",
                         About = "Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java,Node.js etc.",
                         ImageURL = "https://picsum.photos/150/150"
                     }
                 };
 
+                var accounts = new List<Account>() {
+                    new Account
+                    {
+                        ID = 1,
+                        UserName = "@UserName",
+                        Password = "12345"
+                    },
+
+                    new Account
+                    {
+                        ID = 2,
+                        UserName = "@FlyMe",
+                        Password = "12345"
+                    }
+                };
 
                 var posts = new List<Post>()
                 {
@@ -76,6 +92,7 @@ namespace Lab._6
 
                 users.ForEach(user => db.users.Add(user));
                 posts.ForEach(post => db.posts.Add(post));
+                accounts.ForEach(account => db.accounts.Add(account));
 
                 db.SaveChanges();
             }

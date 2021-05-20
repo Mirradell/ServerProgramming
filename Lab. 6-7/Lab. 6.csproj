@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="Views\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\js\" />

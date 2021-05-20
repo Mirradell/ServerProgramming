@@ -21,5 +21,10 @@ namespace Lab._6.Pages
         {
 
         }
+
+        public void SignUp()
+        {
+            RedirectToPage("/SignIn");
+        }
     }
 }

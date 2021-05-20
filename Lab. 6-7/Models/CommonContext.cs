@@ -11,6 +11,7 @@ namespace Lab._6.Models
     {
         public DbSet<Post> posts { get; set; }
         public DbSet<User> users { get; set; }
+        public DbSet<Account> accounts { get; set; }
 
         public CommonContext() { }
 

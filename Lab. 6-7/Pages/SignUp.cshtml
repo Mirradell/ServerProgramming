@@ -1,0 +1,34 @@
+﻿@model Lab._6.Models.Account
+@{
+//    Model = new Models.Account();
+//    Model.UserName = "";
+//    Model.Password = "";
+}
+
+@if (ViewBag.Error == null)
+{
+    <h1>@ViewBag.Hello</h1>
+}
+else
+{
+    <h1>@ViewBag.Error</h1>
+}
+
+@using (Html.BeginForm(ViewBag.Type == "LogIn" ? "EnterUser" : "CreateUser", "User", FormMethod.Post))
+{
+    <div>
+        <label>
+            Введите логин:
+        </label>
+        <input type="text" asp-for="UserName" />
+    </div>
+
+    <div>
+        <label>
+            Введите пароль:
+        </label>
+        <input type="password" asp-for="Password" />
+    </div>
+
+    <button class="btn btn-outline-primary" type="submit">@ViewBag.Button</button>
+}
